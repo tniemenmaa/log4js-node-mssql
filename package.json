@@ -1,0 +1,27 @@
+{
+  "name": "log4js-node-mssql",
+  "version": "1.0.0",
+  "description": "A log4js-node appender for Microsoft Sql Server",
+  "main": "./lib/log4js-mssql.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tniemenmaa/log4js-node-mssql.git"
+  },
+  "keywords": [
+    "log4js-node",
+    "mssql",
+    "log4js",
+    "appender",
+    "sql",
+    "server"
+  ],
+  "author": "Tomi Niemenmaa <me@tommee.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tniemenmaa/log4js-node-mssql/issues"
+  },
+  "homepage": "https://github.com/tniemenmaa/log4js-node-mssql"
+}
