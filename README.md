@@ -17,16 +17,28 @@ log4js.addAppender(msSqlAppender.appender({
 		database: '<database>'
 	},
 	// Replace with your insert statement
-	commandText: 'INSERT INTO [Log] ([Date], [Message]) VALUES (@startTime, @data)',
-	parameters: [
-		{
-			name: '@startTime',
-			dbType: 'DateTime'
-		},
-		{
-			name: '@data',
-			dbType: 'String'
-		}
+commandText: 'INSERT INTO Log ([Date],[Message],[Level],[Logger], [Exception]) VALUES (@startTime, @message, @log_level, @categoryName, @exception)',
+    parameters: [
+        {
+            name: '@startTime',
+            dbType: 'DateTime'
+        },
+        {
+            name: '@message',
+            dbType: 'String'
+        },
+        {
+            name: '@log_level',
+            dbType: 'String'
+        },
+        {
+            name: '@categoryName',
+            dbType: 'String'
+        },
+        {
+            name: '@exception',
+            dbType: 'String'
+        }
 	]
 }));
 
@@ -34,6 +46,9 @@ var logger = log4js.getLogger();
 
 logger.debug('Testing');
 ```
+## Depencies
+log4js-node
+mssql
 
 ## Author
 
